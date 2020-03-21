@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #ECEFF1;
+    font: normal 12pt Arial;
+}
+
+header, nav, section, article, footer {
+    background: white;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#tema {
+    position: absolute;
+    left: -9999px;
+}
+
+#botao {
+    position: relative;
+    float: right;
+    bottom: 120px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#botao::before, #botao::after {
+    content: "";
+    transition: all 0.3s ease;
+}
+
+#botao::before {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.842);
+    border-radius: 25px;
+}
+
+#botao::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: white;
+    border-radius: 25px;
+}
+
+#tema:checked+#botao::before {
+    background: white;
+}
+
+#tema:checked+#botao::after {
+    left: 27px;
+    background: black;
+}
+
+article {
+    background: #ECEFF1;
+}
+
+ul {
+    margin-left: -30px;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #FF8A65;
+    padding: 2px 4px 2px 4px;
+    margin-right: 5px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    background: #ECEFF1;
+}
+
+a:hover {
+    color: Brown;
+    background: #FFF3E0;
+}
+
+footer {
+    font-size: 9pt;
+    text-align: center;
+}
